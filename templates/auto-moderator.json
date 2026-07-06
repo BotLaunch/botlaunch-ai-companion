@@ -1,0 +1,12 @@
+{
+  "$comment": "Auto-moderator starter. Module TYPES are stable; fetch each module's exact default config from GET /bot-modules/definitions and merge your overrides before PATCHing.",
+  "name": "Auto Moderator",
+  "description": "A clean, self-moderating Telegram group: captcha for newcomers, anti-spam, and a welcome message.",
+  "modules": [
+    { "type": "CAPTCHA", "enabled": true, "note": "Verify new members before they can post." },
+    { "type": "SPAM_DETECTION", "enabled": true, "note": "Auto-remove spam and unwanted links." },
+    { "type": "WELCOME", "enabled": true, "note": "Greet new members." },
+    { "type": "AUTO_RESPONSE", "enabled": false, "note": "Optional keyword auto-replies." }
+  ],
+  "requiresScopes": ["modules:read", "modules:write"]
+}
